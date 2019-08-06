@@ -22,6 +22,7 @@
     </form>
   </div>
 </template>
+
 <script>
 export default {
   data () {
@@ -38,6 +39,9 @@ export default {
           name: this.name,
           email: this.email,
           password: this.password
+        })
+        .then(() => {
+          this.$router.push({ name: 'dashboard' })
         })
     }
   }
