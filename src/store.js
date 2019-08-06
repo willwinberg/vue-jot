@@ -31,7 +31,11 @@ export default new Vuex.Store({
         .then(({ data }) => {
           commit('SET_USER_DATA', data)
         })
+    },
+    getters: {
+      loggedIn (state) {
+        return !!state.user
+      }
     }
-
   }
 })
